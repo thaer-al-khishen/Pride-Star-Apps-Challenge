@@ -55,7 +55,7 @@ class BookmarksFragment : Fragment(){
             override fun onNewsItemsClicked(position: Int) {
                 var bookmark = homeList[position]
                 val bookmarkedResult = StoriesResult(
-                    bookmark.abstract, "", "", null, null, "", "", "", null,
+                    bookmark.customabstract, "", "", null, null, "", "", "", null,
                     null, null, bookmark.publishedDate, "", "", "", bookmark.title, "", "",
                     bookmark.url, false, bookmark.multimedia)
                 (activity as MainActivity).switch(

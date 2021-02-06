@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.pridestarappschallenge.models.BookmarkedResult
 import com.example.pridestarappschallenge.room.dao.BookmarksDAO
 
-@Database(entities = [BookmarkedResult::class], version = 1, exportSchema = false)
+@Database(entities = [BookmarkedResult::class], version = 2, exportSchema = false)
 abstract class ApplicationDatabase : RoomDatabase() {
 
     abstract fun bookmarksDao(): BookmarksDAO
@@ -23,8 +23,9 @@ abstract class ApplicationDatabase : RoomDatabase() {
                     if (INSTANCE == null) {
                         INSTANCE = Room.databaseBuilder(
                             context.applicationContext,
-                            ApplicationDatabase::class.java, "message_database"
+                            ApplicationDatabase::class.java, "application_database"
                         )
+                            .fallbackToDestructiveMigration()
                             .build()
                     }
                 }
