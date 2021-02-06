@@ -71,6 +71,7 @@
             android:maxLines="1"
             android:textColor="@color/darkRed"
             android:textStyle="bold"
+            android:textSize="11dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title_text"
             app:layout_constraintEnd_toEndOf="parent"/>

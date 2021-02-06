@@ -11,7 +11,7 @@ data class BookmarkedResult (
     @ColumnInfo(name = "url")
     var url: String,
     @ColumnInfo(name = "abstract")
-    var `abstract`: String,
+    var abstract: String,
     @ColumnInfo(name = "multimedia")
     var multimedia: String,
     @ColumnInfo(name = "published_date")
